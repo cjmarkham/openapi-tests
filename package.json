@@ -1,0 +1,27 @@
+{
+  "name": "openapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "openapi": "openapi-generator-cli generate -i schema.yaml -g typescript-axios -o generated/openapi --additional-properties=ngVersion=6.1.7,npmName=petClient,supportsES6=true,npmVersion=6.9.0,withInterfaces=true,platform=node",
+    "test": "NODE_OPTIONS=--import=tsx ./node_modules/.bin/cucumber-js --config cucumber.json",
+    "dev": "npx nodemon --exec tsx api.ts"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@openapitools/openapi-generator-cli": "^2.15.3",
+    "axios": "^1.7.8",
+    "tsx": "^4.19.2",
+    "whatwg-fetch": "^3.6.20"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.1.0",
+    "chai": "^5.1.2",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}

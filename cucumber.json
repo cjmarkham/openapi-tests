@@ -1,0 +1,8 @@
+{
+  "default": {
+    "parallel": 2,
+    "format": ["progress"],
+    "import": ["component-tests/steps/**/*.ts"],
+    "paths": ["component-tests/features"]
+  }
+}
